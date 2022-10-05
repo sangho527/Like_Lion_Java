@@ -1,4 +1,4 @@
-package Calculator1;
+package Lion221005.Calculator1;
 
 public class Calculator {
     //numbermaker을 통해 숫자를 받고
