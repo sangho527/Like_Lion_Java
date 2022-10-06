@@ -38,7 +38,6 @@ public class MapExercise2 {
             char c = s1.charAt(i);
             boolean isAlphabet = alphabetCnt.isAlphabet(c);
             if (isAlphabet){
-                System.out.println("enter if");
                 alphabetMap.put(c, alphabetMap.get(c) + 1);
             }
         }
