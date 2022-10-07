@@ -11,7 +11,7 @@ public class codeup1024 {
         String[] b = a.split("");
 
         for(int i=0; i<a.length() ; i++) {
-            System.out.println(b[i]);
+            System.out.println("'"+b[i]+"'");
         }
     }
 }
