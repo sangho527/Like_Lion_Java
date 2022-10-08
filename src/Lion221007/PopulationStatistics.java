@@ -5,7 +5,9 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class PopulationStatistics {
 
@@ -98,6 +100,22 @@ public class PopulationStatistics {
         return populationMove.getFromSido() + "," + populationMove.getToSido()+"\n";
     }
 
+    // 1. List<PopulationMove>를 순환하면서 "11,26" 이런 형태의 key를 만든다
+    // 2. moveCntMap에서 해당 key에 해당하는 object가 없으면 생성하고 1이라고 체크한다.
+    // 3. key로 꺼내서 +1
+    // 4. 리턴 moveCntMap
+    public static Map<String, Integer> getMoveCntMap(List<PopulationMove> pml){
+        Map<String,Integer> moveCntMap = new HashMap<>();
+        for (PopulationMove pm:pml) {
+            String key = pm.getFromSido() + "," + pm.getToSido();
+            if (moveCntMap.get(key) == null){
+                moveCntMap.put(key, 1);
+            }
+            moveCntMap.put(key, moveCntMap.get(key) + 1);
+        }
+        return moveCntMap;
+    }
+
     public static void main(String[] args) throws IOException {
 
         String address = "C:\\Users\\PC\\Downloads\\2021_인구관련연간자료_20220927_66125.csv";
@@ -106,10 +124,17 @@ public class PopulationStatistics {
         List<PopulationMove> pml = statistics.readFileByLine(address);
         List<String> strings = new ArrayList<>();
 
+        Map<String, Integer> map = PopulationStatistics.getMoveCntMap(pml);
+        for (String key : map.keySet()) {
+            System.out.println("key:%s value");
+        }
+
         for (PopulationMove pm : pml) {
             System.out.printf("전입:%s, 전출:%s\n", pm.getFromSido(), pm.getToSido());
 
         }
+
+        Map<String, Integer> moveCntMap = new HashMap<>();
 
 
     }
