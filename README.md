@@ -15,4 +15,4 @@
 
 ---
 
-[알고리즘 문제풀이 ](https://github.com/sangho527/Like_Lion_Java/tree/main/src/codeup)
+### [알고리즘 문제풀이] (https://github.com/sangho527/Like_Lion_Java/tree/main/src/algorithm)
