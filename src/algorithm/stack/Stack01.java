@@ -8,11 +8,11 @@ public class Stack01 {
     private Integer[] arr;
 
     public Stack01() {
-        this.arr = new Integer[10000];
+        this.arr = new Integer[1000];
     }
 
     public Stack01(int size){
-        this.arr = new Integer[10000];
+        this.arr = new Integer[1000];
     }
 
     public void push(int value) {
@@ -33,5 +33,9 @@ public class Stack01 {
 
     public Integer[] getArr() {
         return arr;
+    }
+
+    public int peek() {
+        return 0;
     }
 }
