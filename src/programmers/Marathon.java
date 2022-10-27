@@ -20,7 +20,16 @@ public class Marathon { // completion 의 길이는 participant의 길이보다 
             map.put(name, map.get(name) - 1);
         }
 
+        for (String key : map.keySet())
+        {
+            if(map.get(key) > 0)
+            {
+                answer = key;
+                break;
+            }
+        }
+
         return answer;
-    }
+    };
 
 }
