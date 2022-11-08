@@ -5,14 +5,13 @@ import java.util.Scanner;
 public class codeup3001 { // 단순 탐색
 
 
-
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        int[] nums = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
 
+        // 중간값 찾기
 
-        int n = sc.nextInt(); // --> 첫번째 숫자 10
-        int[] numbers = new int[n];
-        fori  i < n //→ loop 10회
-        numbers[i] = sc.nextInt();
+        // 인덱스(시작점, 끝점) 옮기기
+
+        // 같은지 비교하기
     }
 }
