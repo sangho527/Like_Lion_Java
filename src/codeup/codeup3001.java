@@ -2,7 +2,7 @@ package codeup;
 
 import java.util.Scanner;
 
-public class codeup3001 { // 단순 탐색
+public class codeup3001 { // 이분 탐색
 
 
     public static void main(String[] args) {
