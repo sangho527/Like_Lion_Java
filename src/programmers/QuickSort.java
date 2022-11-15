@@ -6,7 +6,7 @@ import java.util.List;
 public class QuickSort {
 
     public static void main(String[] args) {
-        var arr = new int[]{20, 16, 3, 4, 17, 43, 24};
+        var arr = new int[]{20, 16, 3, 4, 17, 43, 24}; // 배열 생성
 
         // 기준값 뽑는 로직
         int pivot = arr[arr.length/2];
